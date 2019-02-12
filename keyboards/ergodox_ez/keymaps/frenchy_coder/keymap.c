@@ -44,17 +44,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,         KC_1,         KC_2,   KC_3,   KC_4,   KC_5,   KC_MINS,
         KC_TAB,         FR_A,         FR_Z,   KC_E,   KC_R,   KC_T,   LT(SYMB, FR_UGRV),
         KC_LSFT,        FR_Q,         KC_S,   KC_D,   KC_F,   KC_G,
-        KC_LCTRL,       FR_W,         KC_X,   KC_C,   KC_V,   KC_B,   KC_DEL,
-        LT(MDIA,KC_GRV),FR_LESS,      FR_SUP2,KC_LALT,KC_LCTRL,
-        LGUI(LCTRL(KC_J)),  LGUI(LSFT(KC_J)),
+        KC_LCTL,        FR_W,         KC_X,   KC_C,   KC_V,   KC_B,   KC_DEL,
+        LT(MDIA,KC_GRV),FR_LESS,      FR_SUP2,KC_LALT,LALT(FR_M),
+                                   LGUI(LCTL(KC_J)),  LGUI(LSFT(KC_J)),
                                                               KC_PGUP,
                                                KC_SPC,KC_BSPC,KC_PGDOWN,
         // right hand
         FR_ASTR,     KC_6,   KC_7,  KC_8,   KC_9,   KC_0,             KC_EQL,
         LT(SYMB, FR_UGRV),    KC_Y,   KC_U,  KC_I,   KC_O,   KC_P,             FR_CIRC,
                      KC_H,   KC_J,  KC_K,   KC_L,   FR_M,       KC_RSFT,
-        KC_RALT,     KC_N,   FR_COMM,KC_COMM,FR_SCLN,FR_COLN,   KC_RCTRL,
-                     KC_LEFT, KC_RIGHT,FR_DOT,FR_SLSH,          LT(MDIA, FR_PERC),
+        KC_RALT,     KC_N,   FR_COMM,KC_COMM,FR_SCLN,FR_COLN,   KC_LGUI,
+                     KC_LEFT, KC_RIGHT,FR_DOT,FR_SLSH,          LT(MDIA, FR_UGRV),
              KC_HOME,        KC_END,
              KC_UP,
              KC_DOWN,KC_TAB, KC_ENT
@@ -84,22 +84,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [SYMB] = LAYOUT_ergodox(
        // left hand
        VRSN,   KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_TRNS,
-       KC_TRNS,KC_EXLM,KC_AT,  KC_LCBR,KC_RCBR,KC_PIPE,KC_TRNS,
-       KC_TRNS,KC_HASH,KC_DLR, KC_LPRN,KC_RPRN,KC_GRV,
-       KC_TRNS,KC_PERC,KC_CIRC,KC_LBRC,KC_RBRC,KC_TILD,KC_TRNS,
+       KC_TRNS,FR_EXLM,FR_AT,  FR_LCBR,FR_RCBR,FR_PIPE,KC_TRNS,
+       KC_TRNS,FR_HASH,FR_DLR, FR_LPRN,FR_RPRN,FR_GRV,
+       KC_TRNS,FR_UGRV,FR_CIRC,FR_LBRC,FR_RBRC,FR_TILD,KC_TRNS,
           EPRM,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
-                                       RGB_MOD,KC_TRNS,
+                                       KC_TRNS,KC_TRNS,
                                                KC_TRNS,
-                               RGB_VAD,RGB_VAI,KC_TRNS,
+                               KC_TRNS,KC_TRNS,KC_TRNS,
        // right hand
        KC_TRNS, KC_F6,   KC_F7,  KC_F8,   KC_F9,   KC_F10,  KC_F11,
-       KC_TRNS, KC_UP,   KC_7,   KC_8,    KC_9,    KC_ASTR, KC_F12,
-                KC_DOWN, KC_4,   KC_5,    KC_6,    KC_PLUS, KC_TRNS,
-       KC_TRNS, KC_AMPR, KC_1,   KC_2,    KC_3,    KC_BSLS, KC_TRNS,
-                         KC_TRNS,KC_DOT,  KC_0,    KC_EQL,  KC_TRNS,
-       RGB_TOG, RGB_SLD,
+       KC_TRNS, KC_UP,   FR_7,   FR_8,    FR_9,    FR_ASTR, KC_F12,
+                KC_DOWN, FR_4,   FR_5,    FR_6,    FR_PLUS, KC_TRNS,
+       KC_TRNS, FR_AMP, FR_1,   FR_2,    FR_3,    FR_BSLS, KC_TRNS,
+       KC_TRNS,FR_0,   FR_DOT,   FR_EQL,  KC_TRNS,
+       KC_TRNS, KC_TRNS,
        KC_TRNS,
-       KC_TRNS, RGB_HUD, RGB_HUI
+       KC_TRNS, KC_TRNS, KC_TRNS
 ),
 /* Keymap 2: Media and mouse keys
  *
@@ -134,8 +134,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   KC_TRNS, KC_TRNS, KC_TRNS,
     // right hand
        KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MPLY,
+       KC_TRNS,  KC_TRNS, KC_TRNS, KC_UP, KC_TRNS, KC_TRNS, KC_TRNS,
+                 KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_TRNS, KC_MPLY,
        KC_TRNS,  KC_TRNS, KC_TRNS, KC_MPRV, KC_MNXT, KC_TRNS, KC_TRNS,
                           KC_VOLU, KC_VOLD, KC_MUTE, KC_TRNS, KC_TRNS,
        KC_TRNS, KC_TRNS,
